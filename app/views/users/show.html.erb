@@ -1,4 +1,4 @@
-<section class="hero is-success">
+<section class="hero is-info">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
@@ -68,20 +68,20 @@
                     <span class="panel-icon">
                       <i class="fas fa-book" aria-hidden="true"></i>
                     </span>
-                    このレシピを見る
+                    このショップを見る
                   <% end %>
                   <% if @user.id == current_user.id %>
                     <%= link_to edit_shop_path(shop), class: "panel-block" do %>
                       <span class="panel-icon">
                         <i class="fas fa-edit"></i>
                       </span>
-                      このレシピを編集する
+                      このショップを編集する
                     <% end %>
                     <%= link_to shop_path(shop), method: :delete, data: {confirm: "削除しますか？"}, class: "panel-block" do %>
                       <span class="panel-icon">
                         <i class="fas fa-trash"></i>
                       </span>
-                      このレシピを削除する
+                      このショップを削除する
                     <% end %>
                   <% end %>
                 </div>
