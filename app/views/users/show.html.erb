@@ -51,33 +51,33 @@
 <section class="section">
   <div class="container">
     <div class="columns is-multiline">
-      <% @user.recipes.each do |recipe| %>
+      <% @user.shops.each do |shop| %>
         <div class="column is-4">
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <%= link_to recipe_path(recipe) do %>
-                  <%= attachment_image_tag recipe, :image, fallback: "no-image.png" %>
+                <%= link_to shop_path(shop) do %>
+                  <%= attachment_image_tag shop, :image, fallback: "no-image.png" %>
                 <% end %>
               </figure>
             </div>
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-                  <%= link_to recipe_path(recipe), class: "panel-block" do %>
+                  <%= link_to shop_path(shop), class: "panel-block" do %>
                     <span class="panel-icon">
                       <i class="fas fa-book" aria-hidden="true"></i>
                     </span>
                     このレシピを見る
                   <% end %>
                   <% if @user.id == current_user.id %>
-                    <%= link_to edit_recipe_path(recipe), class: "panel-block" do %>
+                    <%= link_to edit_shop_path(shop), class: "panel-block" do %>
                       <span class="panel-icon">
                         <i class="fas fa-edit"></i>
                       </span>
                       このレシピを編集する
                     <% end %>
-                    <%= link_to recipe_path(recipe), method: :delete, data: {confirm: "削除しますか？"}, class: "panel-block" do %>
+                    <%= link_to shop_path(shop), method: :delete, data: {confirm: "削除しますか？"}, class: "panel-block" do %>
                       <span class="panel-icon">
                         <i class="fas fa-trash"></i>
                       </span>
@@ -87,7 +87,7 @@
                 </div>
               </div>
               <div class="content">
-                <time><%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
+                <time><%= shop.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
               </div>
             </div>
           </div>
