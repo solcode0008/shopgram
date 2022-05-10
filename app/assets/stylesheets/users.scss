@@ -3,5 +3,8 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .users-image .profile_image {
+  object-fit: cover;
   height: 222px !important;
+  width: 222px !important;
+  margin: 0 auto;
 }
